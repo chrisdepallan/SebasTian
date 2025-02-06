@@ -6,7 +6,7 @@ After=network.target
 User=your_username
 WorkingDirectory=/path/to/sebastian
 Environment="PATH=/path/to/your/venv/bin"
-ExecStart=/path/to/your/venv/bin/uvicorn src.main:app --host 0.0.0.0 --port 8000
+ExecStart=/path/to/your/venv/bin/uvicorn src.main:app --host localhost --port 8000
 
 [Install]
 WantedBy=multi-user.target 

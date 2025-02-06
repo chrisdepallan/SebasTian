@@ -65,7 +65,7 @@ An intelligent personal assistant powered by OpenAI's GPT that helps users set a
    User=your_username
    WorkingDirectory=/path/to/sebastian
    Environment="PATH=/path/to/sebastian/venv/bin"
-   ExecStart=/path/to/sebastian/venv/bin/uvicorn src.main:app --host 0.0.0.0 --port 8000
+   ExecStart=/path/to/sebastian/venv/bin/uvicorn src.main:app --host localhost --port 8000
 
    [Install]
    WantedBy=multi-user.target
@@ -114,7 +114,7 @@ An intelligent personal assistant powered by OpenAI's GPT that helps users set a
    echo @echo off > start_sebastian.bat
    echo cd %~dp0 >> start_sebastian.bat
    echo call venv\Scripts\activate >> start_sebastian.bat
-   echo uvicorn src.main:app --host 0.0.0.0 --port 8000 >> start_sebastian.bat
+   echo uvicorn src.main:app --host localhost --port 8000 >> start_sebastian.bat
    ```
 
 7. Create shortcut to startup folder:
